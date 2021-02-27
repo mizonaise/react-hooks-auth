@@ -1,4 +1,3 @@
-import "./App.css";
 import { Header, LoginForm } from "./components";
 
 function App() {
