@@ -5,6 +5,8 @@ function Header() {
   const authContext = useContext(AuthContext);
 
   function logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("email");
     authContext.setAuth({});
   }
 
