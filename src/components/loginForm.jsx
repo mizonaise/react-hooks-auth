@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../context/authContext";
+
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const authContext = useContext(AuthContext);
 
   function login(e){
     e.preventDefault();
@@ -10,6 +13,7 @@ function LoginForm() {
     if(password === '123'){
         const token = 'Hello Word';
         console.log(token);
+        authContext.setAuth({token, email});
     } else {
         alert('wrong details');
     }

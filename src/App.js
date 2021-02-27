@@ -1,11 +1,11 @@
-import { Header, LoginForm } from "./components";
+import HomePage from "./pages/homePage";
+import { AuthProvider } from "./context/authContext";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <LoginForm />
-    </div>
+    <AuthProvider>
+      <HomePage />
+    </AuthProvider>
   );
 }
 
