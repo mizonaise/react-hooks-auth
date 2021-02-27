@@ -9,7 +9,7 @@ function LoginForm() {
   function login(e) {
     e.preventDefault();
     // @todo: send api request to validate data and get token
-    if (password === "123") {
+    if (email && password) {
       const token = "Hello Word";
       localStorage.setItem("token", token);
       localStorage.setItem("email", email);
